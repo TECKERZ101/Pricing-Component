@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 :root{
     --body-bg: hsl(230, 100%, 99%);
     --text: hsl(225, 20%, 60%);
@@ -23,6 +25,7 @@
     --fs-l: 1.25rem;            /*20px*/
     --fs-xl: 2rem;              /*32px*/
 }
+
 body{
     min-height: 100vh;
     color: var(--text);
@@ -36,16 +39,19 @@ body{
     align-items: center;
     text-align: center;
 }
+
 header{
     background: url('./images/pattern-circles.svg') no-repeat center;
     padding: 3rem 0;
     margin-top: 2rem;
 }
+
 header h1{
     color: var(--button-bg);
     font-size: var(--fs-l);
     margin-bottom: .5rem;
 }
+
 main{
     max-width: 600px;
     width: 100%;
@@ -58,14 +64,13 @@ main{
     border-radius: .5rem;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
+
 main form .range-container .view-container{
     font-size: var(--fs-s);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
-/* ----------range-input---------- */
 
 .range-container input[type='range'] {
     width: 100%;
@@ -88,6 +93,7 @@ main form .range-container .view-container{
     -moz-appearance: none;
     appearance: none;
 }
+
 input[type='range']::-webkit-slider-thumb {
     width: 2.25rem;
     height: 2.25rem;
@@ -99,23 +105,28 @@ input[type='range']::-webkit-slider-thumb {
     -moz-appearance: none;
     appearance: none;
 }
+
 input[type='range']::-webkit-slider-thumb:hover{
     background-color: hsl(174, 86%, 50%);
 }
+
 input[type='range']::-webkit-slider-thumb:active{
     background-color: var(--slider-hover-bg);
 }
+
 .range-container .price-container{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
 }
+
 .price-container #price{
     color: var(--button-bg);
     font-size: var(--fs-xl);
     font-weight: 800;
 }
+
 form .switch-container{
     display: flex;
     justify-content: center;
@@ -124,9 +135,11 @@ form .switch-container{
     margin: 1.5rem 0 1.5rem 0;
     position: relative;
 }
+
 .switch-container > span{
     font-size: var(--fs-xs);
 }
+
 span .yearly{
     position: absolute;
     color: var(--discount-text);
@@ -140,25 +153,27 @@ span .yearly{
     -o-border-radius: .5rem;
     border-radius: .5rem;
 }
+
 .yearly--mobile{
     display: inline;
 }
+
 .yearly--desktop{
     display: none;
 }
+
 .switch-container .switch {
     position: relative;
     width: 2.5rem;
     height: 1.25rem;
 }
 
-/* ----------switch-input---------- */
-
 .switch #switch-input {
     opacity: 0;
     width: 0;
     height: 0;
 }
+
 .switch .slider {
     position: absolute;
     inset: 0;
@@ -175,6 +190,7 @@ span .yearly{
     transition: all .2s ease-out;
     cursor: pointer;
 }
+
 .slider:before {
     position: absolute;
     content: "";
@@ -197,9 +213,11 @@ span .yearly{
 #switch-input:hover + .slider{
     background: var(--checkbox-hover);
 }
+
 #switch-input:checked + .slider {
     background: var(--checkbox-active);
 }
+
 #switch-input:checked + .slider:before {
     -webkit-transform: translate(1.25rem);
     -moz-transform: translate(1.25rem);
@@ -207,6 +225,7 @@ span .yearly{
     -o-transform: translate(1.25rem);
     transform: translate(1.25rem);
 }
+
 form hr{
     display: block;
     height: 1px;
@@ -214,20 +233,24 @@ form hr{
     border-top: 2px solid var(--empty-slide-bar);
     margin: 1.5rem 0;
 }
+
 form .features{
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
+
 .features ul{
     list-style-type: none;
     display: grid;
     gap: .5rem;
     font-size: var(--fs-xs);
 }
+
 ul li img{
     margin-right: .75rem;
 }
+
 .features button{
     width: max-content;
     color: var(--button-clr);
@@ -245,21 +268,23 @@ ul li img{
     border-radius: 1.5rem;
     cursor: pointer;
 }
+
 .features button:hover{
     color: var(--white);
 }
+
 footer{
     font-size: var(--fs-xs);
     margin-bottom: 1rem;
 }
+
 footer a{
     color: var(--checkbox-active);
 }
+
 footer a:hover{
     text-decoration: none;
 }
-
-/* ----------media-queries---------- */
 
 @media(min-width: 370px){
     main{
@@ -272,6 +297,7 @@ footer a:hover{
         margin-left: -1.5rem;
     }
 }
+
 @media(min-width: 750px){
     body{
         background-size: 100% auto;
